@@ -18,16 +18,17 @@ const forecastItemsContainer = document.querySelector('.forecast-items-container
 const apiKey = 'c543b42c95bece02708c64c9bbe8823f';
 
 searchBtn.addEventListener('click', () => {
-    if(cityInput.value.trim() != '') {
-        updateWeatherInfo(cityInput.value);
+    const cityName = cityInput.value.replace(/\s+$/, ''); 
+    if(cityName !== '') {
+        updateWeatherInfo(cityName);
         cityInput.value = '';
         cityInput.blur();
     }
-    
 });
 cityInput.addEventListener('keydown', (event) => {
-    if(event.key == 'Enter' && cityInput.value.trim() != '') {
-        updateWeatherInfo(cityInput.value);
+    const cityName = cityInput.value.replace(/\s+$/, '');
+    if(event.key == 'Enter' && cityName !== '') {
+        updateWeatherInfo(cityName);
         cityInput.value = '';
         cityInput.blur();
     }
