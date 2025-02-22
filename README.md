@@ -1,4 +1,4 @@
-# Ayesha's Weather App 
+# Lakshay's Weather App 
 
 https://lakshaybxt.github.io/Weather/
 
